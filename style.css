@@ -1,0 +1,105 @@
+/* Fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos de lista */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de elemento de lista */
+.form-check {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+  background-color: #202429;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-label {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-check-input:checked + .form-check-label:before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 10px;
+  color: #36d1dc;
+}
+
+.form-check-input:not(:checked) + .form-check-label:before {
+  content: '\f096';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+/* Estilos de lista */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de elemento de lista */
+.form-check {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+  background-color: #202429;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-label {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-check-input:checked + .form-check-label:before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 10px;
+  color: #36d1dc;
+}
+
+.form-check-input:not(:checked) + .form-check-label:before {
+  content: '\f096';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.form-check-input:focus + .form-check-label {
+  box-shadow: 0 0 0 3px rgba(54, 209, 220, 0.5);
+}
+
+/* Hover y enfoque de estilos */
+.form-check:hover {
+  background-color: #2f343a;
+}
+
+.form-check-input:focus:not(:checked) + .form-check-label:before {
+  color: #36d1dc;
+}
+
+.form-check-input:checked:focus + .form-check-label:before {
+  color: #ffffff;
+}
+
+.form-check-input:focus:not(:checked) + .form-check-label:before {
+  color: #ffffff;
+}
+
+.form-check-input:checked:focus + .form-check-label:before {
+  color: #36d1dc;
+}

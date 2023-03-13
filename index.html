@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path of Exile Checklist</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel = "stylesheet" href = "style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      background-color: #1f262d;
+      color: #d9d9d9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      padding: 50px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .form-check-label {
+      font-size: 18px;
+    }
+    .form-check-input:checked + .form-check-label {
+      text-decoration: line-through;
+    }
+    .btn-primary {
+      background-color: #d9b64e;
+      border-color: #d9b64e;
+    }
+    .btn-primary:hover {
+      background-color: #f0c56d;
+      border-color: #f0c56d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Path of Exile Checklist</h1>
+    <h2>Quests</h2>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act1">
+      <label class="form-check-label" for="act1">
+        Complete Act 1
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act2">
+      <label class="form-check-label" for="act2">
+        Complete Act 2
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act3">
+      <label class="form-check-label" for="act3">
+        Complete Act 3
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act4">
+      <label class="form-check-label" for="act4">
+        Complete Act 4
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act5">
+      <label class="form-check-label" for="act5">
+        Complete Act 5
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act6">
+      <label class="form-check-label" for="act6">
+        Complete Act 6
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act7">
+     
+      <label class="form-check-label" for="act7">
+        Complete Act 7
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act8">
+      <label class="form-check-label" for="act8">
+        Complete Act 8
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act9">
+      <label class="form-check-label" for="act9">
+        Complete Act 9
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="act10">
+      <label class="form-check-label" for="act10">
+        Complete Act 10
+      </label>
+    </div>
+    <h2>Other Checklist Items</h2>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="ascendancy">
+      <label class="form-check-label" for="ascendancy">
+        Complete Ascendancy
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="atlas">
+      <label class="form-check-label" for="atlas">
+        Complete Atlas
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="uberlab">
+      <label class="form-check-label" for="uberlab">
+        Complete Uber Lab
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="delve">
+      <label class="form-check-label" for="delve">
+        Complete Delve
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="syndicate">
+      <label class="form-check-label" for="syndicate">
+        Complete Syndicate
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="legion">
+      <label class="form-check-label" for="legion">
+        Complete Legion
+      </label>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg mt-3">Save Progress</button>
+  </div>
+  <script>
+$('.form-check-input').on('change', function() {
+  var checkedState = {};
+  $('.form-check-input').each(function() {
+    var id = $(this).attr('id');
+    var isChecked = $(this).is(':checked');
+    checkedState[id] = isChecked;
+  });
+  document.cookie = 'checklistState=' + JSON.stringify(checkedState) + ';expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/';
+});
+
+var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)checklistState\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+if (cookieValue !== '') {
+  var checkedState = JSON.parse(cookieValue);
+  for (var id in checkedState) {
+    $('#' + id).prop('checked', checkedState[id]);
+  }
+}
+
+  </script>
+  <script>
+    $('.form-check-input').on('change', function() {
+  var checkedState = {};
+  $('.form-check-input').each(function() {
+    var id = $(this).attr('id');
+    var isChecked = $(this).is(':checked');
+    checkedState[id] = isChecked;
+  });
+  document.cookie = 'checklistState=' + JSON.stringify(checkedState) + ';expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/';
+  
+  $(this).parent().fadeOut(200).fadeIn(200);
+});
+
+  </script>
+  
+
+
+</body>
+</html>
